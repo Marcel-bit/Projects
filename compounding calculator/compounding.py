@@ -1,3 +1,6 @@
+import matplotlib
+import matplotlib.pyplot as plt
+
 class Compounding:
     def __init__(self, initial, recurring, years, ann_percent):
         self.initial = initial
@@ -12,26 +15,46 @@ class Compounding:
     #calculate final investment of recurring purchases
     def recurring_part(self):
         amount = 0
-        for i in range(1, self.years):
-            amount += self.recurring*((1+self.ann_percent)**(i))
+        for i in range(self.years):
+            amount += (self.recurring*((1+self.ann_percent)**(i))) 
         return amount
     
-    '''def graph_part(self):
-        maney = self.initial
-        for i in range(1, self.years+1):
-            
-            maney = maney*((1+self.ann_percent)**(i))
-            maney += self.recurring
-            print(maney)'''
-    
+    #graph for initial amount
+    def graph_initial(self):
+        lst = [0]
+        for i in range(self.years):
+            lst.append(self.recurring*((1+self.ann_percent)**(i))) 
+        print()
+        a = [self.initial*((1+self.ann_percent)**x) for x in range(self.years + 1)]
+        total = []
+        for x in range(self.years+1):
+            curr = 0
+            curre = []
+            for y in range(x+1):
+                if x > 0:
+                    curre.append(lst[y])
+                else:
+                    curr += lst[x]
+                    break
+            curr += sum(curre)
+                
+            curr += a[x]
+            total.append(curr)
 
+        ypoints = total
+        xpoints = [x for x in range(self.years+1)]
+        print(ypoints, xpoints)
+        print(f'Final amount : {total[-1]:.2f}')
+
+        plt.plot(xpoints, ypoints)
+        plt.show()
     
     #print out
     def string_part(self):
         i = self.initial_part()
         r = self.recurring_part()
 
-        p = self.initial + (self.recurring*(self.years-1))
+        p = self.initial + (self.recurring*(self.years))
 
         print("-"*32)
         print()
