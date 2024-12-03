@@ -1,0 +1,96 @@
+PS C:\Users\Uporabnik\Documents\vs> git init
+Initialized empty Git repository in C:/Users/Uporabnik/Documents/vs/.git/
+
+
+
+PS C:\Users\Uporabnik\Documents\vs> git --global config user.name "Marcel"
+unknown option: --global
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]
+           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]
+           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+
+PS C:\Users\Uporabnik\Documents\vs> git config  --global user.name "Marcel"
+
+
+PS C:\Users\Uporabnik\Documents\vs> git config  --global user.email "marcel.hribar07@gmail.com"
+
+
+PS C:\Users\Uporabnik\Documents\vs> git clone https://github.com/Marcel-bit/Projects.git
+Cloning into 'Projects'...
+remote: Enumerating objects: 80, done.
+remote: Counting objects: 100% (80/80), done.
+remote: Compressing objects: 100% (70/70), done.
+remote: Total 80 (delta 20), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (80/80), 926.46 KiB | 382.00 KiB/s, done.
+Resolving deltas: 100% (20/20), done.
+PS C:\Users\Uporabnik\Documents\vs> cd .\Projects      
+PS C:\Users\Uporabnik\Documents\vs\Projects> git branch
+* main
+
+
+PS C:\Users\Uporabnik\Documents\vs\Projects> git fetch https://github.com/Marcel-bit/Projects.git
+From https://github.com/Marcel-bit/Projects
+ * branch            HEAD       -> FETCH_HEAD
+
+
+PS C:\Users\Uporabnik\Documents\vs\Projects> git pull https://github.com/Marcel-bit/Projects.git
+From https://github.com/Marcel-bit/Projects
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+
+PS C:\Users\Uporabnik\Documents\vs\Projects> git add .
+
+
+PS C:\Users\Uporabnik\Documents\vs\Projects> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   readerme.txt
+
+
+
+PS C:\Users\Uporabnik\Documents\vs\Projects> git commit -m "initial commit"
+[main 06539f2] initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readerme.txt
+PS C:\Users\Uporabnik\Documents\vs\Projects> git log
+commit 06539f2445f9d7e6c8d659c87e5cdfab19dad943 (HEAD -> main)
+Author: Marcel <marcel.hribar07@gmail.com>
+Date:   Tue Dec 3 10:10:49 2024 +0100
+
+    initial commit
+
+commit 996f84a1549115918bad335d9cd4898a9cd916f6 (origin/main, origin/HEAD)
+Author: Marcel-bit <49585259+Marcel-bit@users.noreply.github.com>
+Date:   Sat Sep 28 08:48:17 2024 +0100
+
+    Delete web/calculator/j
+
+
+PS C:\Users\Uporabnik\Documents\vs\Projects> git remote add origin https://github.com/Marcel-bit/Projects.git
+error: remote origin already exists.
+
+
+PS C:\Users\Uporabnik\Documents\vs\Projects> git remote -v
+origin  https://github.com/Marcel-bit/Projects.git (fetch)
+origin  https://github.com/Marcel-bit/Projects.git (push)
+PS C:\Users\Uporabnik\Documents\vs\Projects> git push origin main
+info: please complete authentication in your browser...
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 340 bytes | 340.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Marcel-bit/Projects.git
+   996f84a..06539f2  main -> main
+
+   
+PS C:\Users\Uporabnik\Documents\vs\Projects>
