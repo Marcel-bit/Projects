@@ -92,5 +92,25 @@ Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 To https://github.com/Marcel-bit/Projects.git
    996f84a..06539f2  main -> main
 
-   
+
+
+PS C:\Users\Uporabnik\Documents\vs\Projects> git push origin main
+Everything up-to-date
+PS C:\Users\Uporabnik\Documents\vs\Projects> git push origin main
+Everything up-to-date
+PS C:\Users\Uporabnik\Documents\vs\Projects> git add .
+PS C:\Users\Uporabnik\Documents\vs\Projects> git commit -m "added gitNshiz"
+[main 595e8d6] added gitNshiz
+ 2 files changed, 96 insertions(+), 1 deletion(-)
+ create mode 100644 gitNshiz.txt
+ delete mode 100644 readerme.txt
+PS C:\Users\Uporabnik\Documents\vs\Projects> git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.52 KiB | 1.52 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Marcel-bit/Projects.git
+   06539f2..595e8d6  main -> main
 PS C:\Users\Uporabnik\Documents\vs\Projects>
